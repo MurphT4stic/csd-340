@@ -1,0 +1,36 @@
+/*Tabari Harvey, 03/29/2025, Module 3_2 Assignment
+https://github.com/MurphT4stic?tab=repositories*/
+
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+
+#container {
+    margin: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1, h2, h3, h4 {
+    background-color: #40ff00;
+    border: 1px;
+    padding: 10px;
+}
+
+.boldonse-regular {
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+a {
+    color: #004080;
+    text-decoration: none; 
+}
+
+a:hover {
+    color: #ffff4d;   
+}
+
+a:visited {
+    color: #4d94ff;
+}
