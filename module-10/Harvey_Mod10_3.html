@@ -1,0 +1,27 @@
+<!-- Tabari Harvey, 05/03/2025, Module-10.3 Assignment -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Harvey_Mod4_2.css">
+    <script>
+        function changeImage(imagePath) {
+            document.getElementById("mainImage").src = imagePath;
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <div style="text-align: center;">
+        <img id="mainImage" src="images/Episode9.jpg" alt="StarWars" style="width:300px;height:auto;">
+        <div>
+            <img src="images/Abeloth_2.jpg" alt="Who fought Abeloth" onclick="changeImage('images/Starwars_EU_2.jpg')" style="width:100px;cursor:pointer;">
+            <img src="images/Starwars_EU_2.jpg" alt="One Generation to another" onclick="changeImage('images/Starwars_EU_3.jpg')" style="width:100px;cursor:pointer;">
+            <img src="images/Starwars_books.jpg" alt="From books to movies & tv" onclick="changeImage('images/starwarscharacters.jpg')" style="width:100px;cursor:pointer;">
+            
+        </div>
+    </div>
+</body>
+</html>
