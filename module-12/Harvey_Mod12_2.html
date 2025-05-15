@@ -1,0 +1,85 @@
+<!-- Tabari Harvey, 05/15/2025, Module 12.2 Assignment -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <link rel="stylesheet" href="Harvey_Mod12_2.css">
+  <style>
+    .button-container {
+      margin-top: 20px;
+    }
+
+    button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Assignment 12.2: JavaScript - Part 4</h1>
+  <div class="container">
+    <div class="box left">
+      <h3>Top 10 Favorite Books</h3>
+      <div class="button-container">
+        <button onclick="displayBooksAscending()">Top to Bottom</button>
+        <button onclick="displayBooksDescending()">Bottom to Top</button>
+      </div>
+      <ol id="bookList"></ol>
+    </div>
+    <div class="box right">
+      <h3>5 Things I've Learned Since the Course Started</h3>
+      <ul>
+        <li>What CSS actually is</li>
+        <li>HTML can be fun</li>
+        <li>Always input your code in the HTML check website</li>
+        <li>There is a lot of information with HTML and CSS</li>
+        <li>There are multiple versions of HTML</li>
+      </ul>
+    </div>
+  </div>
+  <div class="full-width-div"></div>
+  <div class="bottom-div">
+    <a href="https://murpht4stic.github.io/csd-340/">Back to Portal Page</a>
+  </div>
+
+  <script>
+    const books = [
+      "Holes",
+      "Heroes of Olympus: House of Hades",
+      "Heroes of Olympus: Mark of Athena",
+      "Percy Jackson: The Titans Curse",
+      "Star Wars Legacy of the Force: Sacrifice",
+      "Star Wars Legacy of the Force: Inferno",
+      "Star Wars Fate of the Jedi: Omen",
+      "Star Wars Fate of the Jedi: Allies",
+      "Mistborn",
+      "The Rage of Dragons"
+    ];
+
+    function displayBooksAscending() {
+      const sortedBooks = [...books].sort();
+      updateBookList(sortedBooks);
+    }
+
+    function displayBooksDescending() {
+      const sortedBooks = [...books].sort().reverse();
+      updateBookList(sortedBooks);
+    }
+
+    function updateBookList(bookArray) {
+      const list = document.getElementById('bookList');
+      list.innerHTML = '';
+      bookArray.forEach(book => {
+        const listItem = document.createElement('li');
+        listItem.textContent = book;
+        list.appendChild(listItem);
+      });
+    }
+
+    displayBooksAscending();
+  </script>
+</body>
+</html>
